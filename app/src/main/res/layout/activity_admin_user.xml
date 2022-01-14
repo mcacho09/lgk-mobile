@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@android:color/white"
+  tools:context=".AdminCustomersActivity">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="6dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+      android:id="@+id/lay_top"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:orientation="vertical">
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+          android:id="@+id/icon_title"
+          style="@style/icon_titles"
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:src="@drawable/ic_people"/>
+
+        <TextView
+          style="@style/titles"
+          android:layout_centerVertical="true"
+          android:layout_marginBottom="6dp"
+          android:layout_toRightOf="@+id/icon_title"
+          android:text="ADMINISTRAR USUARIO"/>
+
+      </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+      android:id="@+id/div_1"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_below="@+id/lay_top"
+      android:layout_marginBottom="6dp"
+      android:layout_marginTop="6dp"
+      android:background="@android:color/darker_gray"/>
+
+    <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/div_2"
+      android:layout_below="@+id/div_1">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+          style="@style/subtitles"
+          android:layout_marginBottom="3dp"
+          android:layout_marginTop="3dp"
+          android:text="Ingresa los datos del usuario"/>
+
+
+        <TextView
+          style="@style/subtitles"
+          android:layout_marginBottom="3dp"
+          android:layout_marginTop="3dp"
+          android:textColor="@color/colorGray"
+          android:text="Nombre completo (requerido)"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa el nombre del usuario"
+            android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+          style="@style/subtitles"
+          android:layout_marginBottom="3dp"
+          android:layout_marginTop="3dp"
+          android:textColor="@color/colorGray"
+          android:text="Perfil de usuario (requerido)"/>
+
+        <Spinner
+          android:id="@+id/spProfile"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"/>
+
+        <TextView
+          style="@style/subtitles"
+          android:layout_marginBottom="3dp"
+          android:layout_marginTop="3dp"
+          android:textColor="@color/colorGray"
+          android:text="Login usuario (requerido)"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <EditText
+            android:id="@+id/etLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa el login para el usuario"
+            android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+          style="@style/subtitles"
+          android:layout_marginBottom="3dp"
+          android:layout_marginTop="3dp"
+          android:textColor="@color/colorGray"
+          android:text="Contraseña (requerido)"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa la contraseña"
+            android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+          android:id="@+id/tvpassword_change"
+          style="@style/subtitles"
+          android:layout_marginBottom="3dp"
+          android:layout_marginTop="3dp"
+          android:textColor="@color/colorRedInfo"
+          android:paddingBottom="6dp"
+          android:text="Deje en blanco si no desea cambiarla"/>
+
+        <TextView
+          style="@style/subtitles"
+          android:layout_marginBottom="3dp"
+          android:layout_marginTop="3dp"
+          android:textColor="@color/colorGray"
+          android:text="Correo Electrónico (requerido)"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa el correo electrónico"
+            android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+          style="@style/subtitles"
+          android:layout_marginBottom="3dp"
+          android:layout_marginTop="3dp"
+          android:textColor="@color/colorGray"
+          android:text="Puesto"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <EditText
+            android:id="@+id/etJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa el puesto acargo"
+            android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+          style="@style/subtitles"
+          android:layout_marginBottom="3dp"
+          android:layout_marginTop="3dp"
+          android:textColor="@color/colorGray"
+          android:text="Teléfono"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa un numero de teléfono"
+            android:inputType="phone"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+          style="@style/subtitles"
+          android:layout_marginBottom="3dp"
+          android:layout_marginTop="3dp"
+          android:textColor="@color/colorGray"
+          android:text="Orden"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <EditText
+            android:id="@+id/etOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Especifica un criterio de orden"
+            android:inputType="number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <CheckBox
+            android:id="@+id/cbActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:checked="true"
+            android:text="¿Activo?"/>
+
+          <CheckBox
+            android:id="@+id/cbSU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            android:text="¿Super Usuario?"/>
+
+        </RelativeLayout>
+
+      </LinearLayout>
+
+    </ScrollView>
+
+    <View
+      android:id="@+id/div_2"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_above="@+id/lay_bottom"
+      android:layout_marginBottom="6dp"
+      android:layout_marginTop="6dp"
+      android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+      android:id="@+id/lay_bottom"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:orientation="horizontal">
+
+      <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_weight="1"
+        android:text="Cancelar"/>
+
+      <Button
+        android:id="@+id/btnSave"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        android:text="Guardar"/>
+
+    </LinearLayout>
+
+  </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

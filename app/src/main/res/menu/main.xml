@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/iCRM"
+        android:title="CRM"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_search_white"
+        android:orderInCategory="1"/>
+
+    <item
+        android:id="@+id/iNotificacion"
+        android:title="@string/iNotificaciones"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_notifications_none"
+        android:orderInCategory="2"/>
+
+    <item
+        android:id="@+id/iMensaje"
+        android:title="@string/iMensajes"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_email_white"
+        android:orderInCategory="3"/>
+
+    <item
+        android:id="@+id/iMiPerfil"
+        android:title="@string/iMiPerfil"
+        android:orderInCategory="4"/>
+
+    <!--<item
+        android:id="@+id/iTareas"
+        android:title="@string/iTareas"
+        android:orderInCategory="5"/>-->
+
+    <item
+        android:id="@+id/iCerrarSesion"
+        android:title="@string/iCerrarSesion"
+        android:orderInCategory="6"/>
+
+</menu>

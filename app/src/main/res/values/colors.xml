@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2b78e4</color>
+    <color name="colorPrimaryDark">#085394</color>
+    <color name="colorAccent">#536DFE</color>
+
+    <color name="colorBlue">#2b78e4</color>
+    <color name="colorGreen">#009e0f</color>
+    <color name="colorRed">#cf2a27</color>
+    <color name="colorYellow">#f1c40f</color>
+    <color name="colorRedInfo">#ea9999</color>
+    <color name="bgCards">#eeeeee</color>
+    <color name="bgCardsMessage">#699be2</color>
+    <color name="bgStar">#a77500</color>
+    <color name="colorOrange">#ff9900</color>
+    <color name="colorPurple">#9900ff</color>
+    <color name="colorGray">#999999</color>
+</resources>

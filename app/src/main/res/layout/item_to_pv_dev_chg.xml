@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cv="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:clickable="true"
+  android:focusable="true"
+  android:foreground="?android:attr/selectableItemBackground"
+  android:orientation="vertical"
+  cv:cardBackgroundColor="@color/bgCards"
+  cv:cardCornerRadius="6dp"
+  cv:cardElevation="3dp"
+  cv:cardUseCompatPadding="true"
+  cv:contentPadding="6dp">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+      android:id="@+id/tvQty"
+      android:layout_width="60dp"
+      android:layout_height="60dp"
+      android:layout_centerVertical="true"
+      android:background="@drawable/circle_shape_disabled"
+      android:gravity="center"
+      android:text="0"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textColor="@android:color/white"
+      android:textStyle="bold"/>
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_marginLeft="3dp"
+      android:layout_marginRight="3dp"
+      android:layout_toEndOf="@+id/tvQty"
+      android:layout_toLeftOf="@+id/imgProductLess"
+      android:layout_toRightOf="@+id/tvQty"
+      android:layout_toStartOf="@+id/imgProductLess"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/tvCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Código del producto"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold"/>
+
+      <TextView
+        android:id="@+id/tvShortName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre corto del producto"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"/>
+
+      <TextView
+        android:id="@+id/tvLongName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="Nombre largo del producto"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"/>
+
+      <TextView
+        android:id="@+id/tvType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo de producto"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+    </LinearLayout>
+
+    <ImageView
+      android:id="@+id/imgProductLess"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:src="@drawable/ic_remove_circle"
+      android:tint="@color/colorGray"/>
+
+  </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

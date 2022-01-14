@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cv="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  cv:cardBackgroundColor="@color/bgCards"
+  cv:cardCornerRadius="6dp"
+  cv:cardElevation="3dp"
+  cv:cardUseCompatPadding="true"
+  cv:contentPadding="10dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+      <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_access_time"
+        android:tint="@color/colorBlue"/>
+
+      <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00/00/0000 00:00:00"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorBlue"
+        android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/tvNombre"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Nombre de la tienda"
+      android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <org.apmem.tools.layouts.FlowLayout
+        android:id="@+id/lyDetalles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/ivBtn"
+        android:layout_toStartOf="@+id/ivBtn">
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_attach_money"
+            android:tint="@color/colorGreen"/>
+
+          <TextView
+            android:id="@+id/tvVenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorGreen"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingLeft="12dp">
+
+          <ImageView
+            android:id="@+id/imgChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_compare_arrows"
+            android:tint="@color/colorGray"/>
+
+          <TextView
+            android:id="@+id/tvChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorGray"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingLeft="12dp">
+
+          <ImageView
+            android:id="@+id/imgDev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:src="@drawable/ic_highlight_off"
+            android:tint="@color/colorGray"/>
+
+          <TextView
+            android:id="@+id/tvDev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorGray"/>
+
+        </LinearLayout>
+
+      </org.apmem.tools.layouts.FlowLayout>
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lyDetalles"
+        android:layout_toLeftOf="@+id/ivBtn"
+        android:layout_toStartOf="@+id/ivBtn">
+
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:src="@drawable/ic_person"/>
+
+        <TextView
+          android:id="@+id/tvDri"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Nombre del vendedor"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:textColor="@color/colorGray"/>
+
+      </LinearLayout>
+
+      <com.mikhaellopez.circularimageview.CircularImageView
+        xmlns:imc="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ivBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_arrow_forward"
+        android:tint="@android:color/white"
+        imc:civ_border="true"
+        imc:civ_border_color="@color/colorBlue"
+        imc:civ_shadow="true"
+        imc:civ_shadow_color="#eee"
+        imc:civ_shadow_radius="4"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+      android:layout_marginTop="6dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+      <ImageView
+        android:id="@+id/imgState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_thumb_up"
+        android:tint="@color/colorYellow"/>
+
+      <TextView
+        android:id="@+id/tvState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Pagago"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

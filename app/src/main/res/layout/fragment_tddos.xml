@@ -1,0 +1,305 @@
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="app.logistikappbeta.com.logistikapp.Fragments.TransactionDetailTabs.TDDos">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cv:cardBackgroundColor="@color/bgCards"
+        cv:cardCornerRadius="6dp"
+        cv:cardElevation="6dp"
+        cv:cardUseCompatPadding="true"
+        cv:contentPadding="6dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="3dp"
+              android:src="@drawable/ic_library_books"
+              android:tint="@color/colorGreen"/>
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="VENTA: $"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:textColor="@color/colorGreen"
+              android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00.00"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/colorGreen"
+                android:textStyle="bold" />
+
+
+          </LinearLayout>
+
+          <androidx.cardview.widget.CardView
+            xmlns:cv="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cvSale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            cv:cardBackgroundColor="@color/colorRedInfo"
+            cv:cardCornerRadius="10dp"
+            cv:cardElevation="3dp"
+            cv:cardUseCompatPadding="true"
+            cv:contentPadding="10dp">
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+              <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_error"
+                android:tint="@color/colorRed"/>
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No hay ventas"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/colorRed"/>
+
+            </LinearLayout>
+
+          </androidx.cardview.widget.CardView>
+
+          <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListSale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+        xmlns:cv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cv:cardBackgroundColor="@color/bgCards"
+        cv:cardCornerRadius="6dp"
+        cv:cardElevation="6dp"
+        cv:cardUseCompatPadding="true"
+        cv:contentPadding="6dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="3dp"
+              android:src="@drawable/ic_library_books"
+              android:tint="@color/colorOrange"/>
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="CAMBIO"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:textColor="@color/colorOrange"
+              android:textStyle="bold"/>
+
+
+          </LinearLayout>
+
+          <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+                                              android:id="@+id/cvChg"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              cv:cardBackgroundColor="@color/colorRedInfo"
+                                              cv:cardCornerRadius="10dp"
+                                              cv:cardElevation="3dp"
+                                              cv:cardUseCompatPadding="true"
+                                              cv:contentPadding="10dp">
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+              <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_error"
+                android:tint="@color/colorRed"/>
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No hay cambios"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/colorRed"/>
+
+            </LinearLayout>
+
+          </androidx.cardview.widget.CardView>
+
+          <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+        xmlns:cv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cv:cardBackgroundColor="@color/bgCards"
+        cv:cardCornerRadius="6dp"
+        cv:cardElevation="6dp"
+        cv:cardUseCompatPadding="true"
+        cv:contentPadding="6dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="3dp"
+              android:src="@drawable/ic_library_books"
+              android:tint="@color/colorOrange"/>
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="DEVOLUCIÓN $"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:textColor="@color/colorOrange"
+              android:textStyle="bold"/>
+
+            <TextView
+              android:id="@+id/tvQtyDev"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="00.00"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:textColor="@color/colorOrange"
+              android:textStyle="bold"/>
+
+          </LinearLayout>
+
+          <androidx.cardview.widget.CardView
+            xmlns:cv="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cvDev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            cv:cardBackgroundColor="@color/colorRedInfo"
+            cv:cardCornerRadius="10dp"
+            cv:cardElevation="3dp"
+            cv:cardUseCompatPadding="true"
+            cv:contentPadding="10dp">
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+              <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_error"
+                android:tint="@color/colorRed"/>
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No hay devoluciones"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/colorRed"/>
+
+            </LinearLayout>
+
+          </androidx.cardview.widget.CardView>
+
+          <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListDevolution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <LinearLayout
+        android:id="@+id/lay_tot_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/tvTotVta"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textAppearance="@style/TextAppearance.AppCompat.Title"
+          android:textAlignment="center"
+          android:text="Total Venta: $"/>
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+          android:textAlignment="center"
+          android:text="Total Venta = Venta - Devolución"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <group>
+
+    <item
+      android:id="@+id/iInicio"
+      android:icon="@drawable/ic_insert_chart"
+      android:title="@string/iInicio"/>
+
+    <item
+      android:id="@+id/iCustomer"
+      android:icon="@drawable/ic_business"
+      android:title="@string/iCustomers"/>
+
+    <item
+      android:id="@+id/iLogistica"
+      android:title="@string/iLogistica">
+      <menu>
+        <item
+          android:id="@+id/iViajes"
+          android:icon="@drawable/ic_local_shipping"
+          android:title="@string/iViajes"/>
+        <item
+          android:id="@+id/iHistorico"
+          android:icon="@drawable/ic_access_time"
+          android:title="@string/iHistorico"/>
+      </menu>
+    </item>
+
+    <item
+      android:id="@+id/iVentas"
+      android:title="@string/iVentas">
+
+      <menu>
+
+        <item
+          android:id="@+id/iTransacciones"
+          android:icon="@drawable/ic_attach_money"
+          android:title="@string/iTransacciones"/>
+
+        <item
+          android:id="@+id/iAlmacen"
+          android:icon="@drawable/ic_dashboard"
+          android:title="@string/iAlmacen"/>
+
+      </menu>
+
+    </item>
+
+    <item
+      android:id="@+id/iConfiguracion"
+      android:title="@string/iConfiguracion">
+
+      <menu>
+
+        <item
+          android:id="@+id/iUsuarios"
+          android:icon="@drawable/ic_people"
+          android:title="@string/iUsuarios"/>
+
+      </menu>
+
+    </item>
+
+    <item android:title="@string/iComunicacion">
+      <menu>
+
+        <item
+          android:id="@+id/iMensajes"
+          android:icon="@drawable/ic_email"
+          android:title="@string/iMensajes"/>
+
+        <item
+          android:id="@+id/iNotificacion"
+          android:icon="@drawable/ic_notifications_none"
+          android:title="@string/iNotificaciones"/>
+        <!-- <item
+            android:id="@+id/iGrupos"
+            android:title="@string/iGrupos"/>
+        <item
+            android:id="@+id/iTareas"
+            android:title="@string/iTareas"/>-->
+      </menu>
+    </item>
+
+    <item
+      android:id="@+id/iOffline"
+      android:icon="@drawable/ic_signal_cellular_connected_no_internet"
+      android:title="@string/iOffline"
+      />
+
+    <item
+      android:id="@+id/iVersion"
+      android:enabled="false"
+      android:icon="@drawable/ic_info"
+      android:title="@string/iVersion"/>
+
+  </group>
+
+</menu>

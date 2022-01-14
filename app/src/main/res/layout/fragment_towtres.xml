@@ -1,0 +1,209 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp"
+    tools:context=".Fragments.TravelWayBillTabs.TWBTresFragment">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+      <ImageView
+          android:id="@+id/ivIcon"
+          style="@style/icon_titles"
+          android:src="@drawable/ic_public"/>
+
+      <TextView
+          android:id="@+id/tvTitle"
+          style="@style/titles"
+          android:layout_toLeftOf="@+id/chMyUbicacion"
+          android:layout_toRightOf="@+id/ivIcon"
+          android:text="MAPA DEL VIAJE"/>
+
+      <CheckBox
+          android:id="@+id/chMyUbicacion"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_gravity="center_vertical"
+          android:checked="true"
+          android:text="Mi ubicación"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal">
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="3dp"
+          android:layout_weight="1"
+          android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_place"
+            android:tint="@color/colorRed"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Sin visitar"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorRed"/>
+
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_place"
+            android:tint="@color/colorGreen"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Visitado"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorGreen"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_place"
+            android:tint="@color/colorOrange"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Fuera de rango"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorOrange"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal">
+
+      <LinearLayout
+          android:id="@+id/btnLocate"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:clickable="true"
+          android:layout_gravity="center"
+          android:background="@drawable/customborder"
+          android:layout_weight="1">
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_place"
+            android:tint="@color/colorBlue"
+            android:clickable="false"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Ubicar"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlue"
+            android:clickable="false"/>
+
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:gravity="center"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/circle_shape_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:text="50 mts"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlue" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:gravity="center"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/circle_shape_orange" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:text="150 mts"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorOrange" />
+
+      </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/fMap"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"/>
+
+  </LinearLayout>
+
+</FrameLayout>

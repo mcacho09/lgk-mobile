@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.logistikappbeta.com.logistikapp">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    -->
+     <uses-permission android:name="android.permission.BLUETOOTH" />
+     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+     <uses-permission android:name="android.permission.INTERNET" />
+     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+     <uses-permission android:name="android.permission.CAMERA" />
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+     <!--
+            The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+            Google Maps Android API v2, but you must specify either coarse or fine
+            location permissions for the 'MyLocation' functionality.
+     -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+
+    <application
+        android:name="app.logistikappbeta.com.logistikapp.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.Splashscreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="app.logistikappbeta.com.logistikapp.BatchLocationActivity" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.NuevaTareaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeActionBar" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.ConversacionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.NuevoMensajeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.TravelWayBillActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.TravelOnWayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.MapsCRMActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.ReporteHistoricoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.TransactionDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.PuntoVentaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.ProcessSaleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.CommentsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.AddClientTravelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.AdminUserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.CustomersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.CustomersToSaleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.AdminCustomersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <service
+            android:name="app.logistikappbeta.com.logistikapp.Services.LocationRegisterService"
+            android:enabled="true"
+            android:exported="true" />
+<!--
+        <service
+            android:name="app.logistikappbeta.com.logistikapp.MyBackgroundLocationService"
+            android:enabled="true"
+            android:exported="false"></service>
+
+        <service
+-->
+            android:name="app.logistikappbeta.com.logistikapp.Services.NotificationService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.PrintTicketActivity"
+            android:label="@string/title_activity_print_ticket"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.sdk.DeviceListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.AdminStockActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.StockActivity"
+            android:label="@string/title_activity_stock"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.ActivesActivity"
+            android:label="@string/title_activity_actives"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.ActiveCommentActivity"
+            android:label="@string/title_activity_active_comment"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.AddActiveActivity"
+            android:label="@string/title_activity_add_active"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name="app.logistikappbeta.com.logistikapp.OfflineActivity"
+            android:label="@string/title_activity_offline"
+            android:theme="@style/AppTheme"></activity>
+
+        <receiver
+            android:name="app.logistikappbeta.com.logistikapp.Broadcasts.InternetReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

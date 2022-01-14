@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cv="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="3dp"
+  android:layout_marginTop="3dp"
+  android:orientation="vertical"
+  cv:cardBackgroundColor="@color/bgCards"
+  android:clickable="true"
+  android:focusable="true"
+  android:foreground="?android:attr/selectableItemBackground"
+  cv:cardCornerRadius="6dp"
+  cv:contentPadding="6dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/tvCode"
+      style="@style/Base.TextAppearance.AppCompat.Title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Código"/>
+
+    <TextView
+      android:id="@+id/tvUser"
+      style="@style/Base.TextAppearance.AppCompat.Body1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/tv_repsponsable"/>
+
+    <TextView
+      android:id="@+id/tvRetail"
+      style="@style/Base.TextAppearance.AppCompat.Body1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/tv_retail"/>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:weightSum="2">
+
+      <TextView
+        android:id="@+id/tvPcs"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_corner_blue"
+        android:text="@string/tv_pcs_sub"
+        android:textColor="@android:color/white"/>
+
+      <TextView
+        android:id="@+id/tvPkg"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_corner_purple"
+        android:text="@string/tv_pkg_sub"
+        android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</androidx.cardview.widget.CardView>

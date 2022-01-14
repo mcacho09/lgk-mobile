@@ -1,0 +1,539 @@
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cv="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".Fragments.InicioFragment">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="6dp">
+
+      <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_insert_chart"
+        android:tint="@color/colorBlue"/>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/tvTituloInicio"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorBlue"
+        android:textStyle="bold"/>
+    </LinearLayout>
+
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Selecciona una fecha"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:textColor="@color/colorBlue"/>
+
+    <Button
+      android:id="@+id/btnCalendar"
+      style="@style/Base.Widget.AppCompat.Button.Borderless"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:drawableLeft="@drawable/ic_date_range"
+      android:drawableTint="@color/colorBlue"
+      android:text="01/01/2001"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textColor="@color/colorBlue"/>
+
+
+    <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:scrollbars="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+          android:id="@+id/lay_travels"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:clickable="true"
+          android:focusable="true"
+          android:foreground="?android:attr/selectableItemBackground"
+          cv:cardBackgroundColor="@color/bgCards"
+          cv:cardCornerRadius="6dp"
+          cv:cardElevation="3dp"
+          cv:cardUseCompatPadding="true"
+          cv:contentPadding="3dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="6dp">
+
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:padding="6dp"
+                  android:weightSum="3">
+
+                  <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="6dp"
+                    android:src="@drawable/ic_local_shipping"
+                    android:tint="@color/colorBlue"/>
+
+                  <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_vertical|right"
+                      android:text="@string/tvTituloViajes"
+                      android:textAppearance="?android:attr/textAppearanceMedium"
+                      android:textColor="@color/colorBlue"/>
+
+                    <TextView
+                      android:id="@+id/tvTravels"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_vertical|right"
+                      android:text="0"
+                      android:textAppearance="?android:attr/textAppearanceLarge"
+                      android:textStyle="bold"/>
+
+                  </LinearLayout>
+
+                </LinearLayout>
+
+              </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/colorGray"/>
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="horizontal"
+              android:weightSum="3">
+
+              <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="6dp">
+
+                  <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                      android:layout_width="28dp"
+                      android:layout_height="28dp"
+                      android:src="@drawable/ic_place"
+                      android:tint="@color/colorGreen"/>
+
+                    <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:gravity="center_vertical"
+                      android:text="@string/tvTituloClientes"
+                      android:textAppearance="?android:attr/textAppearanceMedium"
+                      android:textColor="@color/colorGreen"/>
+
+                  </LinearLayout>
+
+                  <TextView
+                    android:id="@+id/tvStores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold"/>
+
+                </LinearLayout>
+
+              </RelativeLayout>
+
+              <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="6dp">
+
+                  <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/ic_check_circle"
+                      android:tint="@color/colorOrange"/>
+
+                    <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:text="@string/tvTituloVisitados"
+                      android:textAppearance="?android:attr/textAppearanceMedium"
+                      android:textColor="@color/colorOrange"/>
+
+                  </LinearLayout>
+
+                  <TextView
+                    android:id="@+id/tvCheckins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical|right"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold"/>
+
+                </LinearLayout>
+
+              </RelativeLayout>
+
+              <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="6dp">
+
+                  <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/ic_cancel"
+                      android:tint="@color/colorRed"/>
+
+                    <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:gravity="center"
+                      android:text="@string/tvTituloNoVisitados"
+                      android:textAppearance="?android:attr/textAppearanceSmall"
+                      android:textColor="@color/colorRed"/>
+
+                  </LinearLayout>
+
+                  <TextView
+                    android:id="@+id/tvNotCheckins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold"/>
+
+                </LinearLayout>
+
+              </RelativeLayout>
+
+            </LinearLayout>
+
+          </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:clickable="true"
+          android:focusable="true"
+          android:foreground="?android:attr/selectableItemBackground"
+          cv:cardBackgroundColor="@color/bgCards"
+          cv:cardCornerRadius="6dp"
+          cv:cardElevation="3dp"
+          cv:cardUseCompatPadding="true"
+          cv:contentPadding="3dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="6dp">
+
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:padding="6dp"
+                  android:weightSum="3">
+
+                  <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="6dp"
+                    android:tint="@color/colorGreen"
+                    cv:iiv_icon="@string/faw_usd"/>
+
+                  <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_vertical|right"
+                      android:text="@string/tvTituloVentas"
+                      android:textAppearance="?android:attr/textAppearanceMedium"
+                      android:textColor="@color/colorGreen"/>
+
+                    <TextView
+                      android:id="@+id/tvSales"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_vertical|right"
+                      android:text="0"
+                      android:textAppearance="?android:attr/textAppearanceLarge"
+                      android:textStyle="bold"/>
+
+                  </LinearLayout>
+
+                </LinearLayout>
+
+              </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+              android:id="@+id/lay_sales_details"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+              <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGray"/>
+
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                  android:id="@+id/lay_products"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+
+                  <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="horizontal">
+
+                      <com.mikepenz.iconics.view.IconicsImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:tint="@color/colorBlue"
+                        cv:iiv_icon="@string/faw_cube"/>
+
+                      <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:text="@string/tvTituloProductos"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorBlue"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                      android:id="@+id/tvProductsQty"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:text="0"
+                      android:textAppearance="?android:attr/textAppearanceLarge"
+                      android:textStyle="bold"/>
+
+                  </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                  android:id="@+id/lay_decrease"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+
+                  <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+
+                      <com.mikepenz.iconics.view.IconicsImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:tint="@color/colorRed"
+                        cv:iiv_icon="@string/faw_usd"/>
+
+                      <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/tvTituloMerma"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorRed"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                      android:id="@+id/tvDecrease"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:gravity="center_vertical|right"
+                      android:text="0"
+                      android:textAppearance="?android:attr/textAppearanceLarge"
+                      android:textStyle="bold"/>
+
+                  </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                  android:id="@+id/lay_utility"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+
+                  <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+
+                      <com.mikepenz.iconics.view.IconicsImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:tint="@color/colorGreen"
+                        cv:iiv_icon="@string/faw_money"/>
+
+                      <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/tvTituloUtilidad"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorGreen"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                      android:id="@+id/tvUtility"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:text="0"
+                      android:textAppearance="?android:attr/textAppearanceLarge"
+                      android:textStyle="bold"/>
+
+                  </LinearLayout>
+
+                </RelativeLayout>
+
+              </LinearLayout>
+
+            </LinearLayout>
+
+          </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+      </LinearLayout>
+
+    </ScrollView>
+
+  </LinearLayout>
+
+
+</FrameLayout>

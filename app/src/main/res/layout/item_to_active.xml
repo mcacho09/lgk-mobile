@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="3dp"
+  app:cardBackgroundColor="@color/bgCards"
+  app:cardCornerRadius="6dp"
+  app:cardElevation="3dp"
+  app:cardUseCompatPadding="true"
+  app:contentPadding="6dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <TextView
+        android:id="@+id/tvLastVisited"
+        style="@style/Base.TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/ivCheck"
+        android:text="@string/last_visited"
+        android:textColor="@color/colorBlue"/>
+
+      <ImageView
+        android:id="@+id/ivCheck"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_check_circle"
+        android:tint="@color/colorGreen"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="2dp"
+        android:src="@drawable/ic_image_white"
+        android:tint="@color/colorBlue"/>
+
+      <TextView
+        android:id="@+id/tvCode"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/ivImage"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="1234567890"
+        android:textColor="@color/colorBlue"/>
+
+    </RelativeLayout>
+
+  </LinearLayout>
+
+</androidx.cardview.widget.CardView>

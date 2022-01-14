@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fitsSystemWindows="true"
+  tools:context=".CustomersToSaleActivity">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"/>
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:src="@drawable/ic_business"
+          android:tint="@color/colorBlue"/>
+
+        <TextView
+          style="@style/titles"
+          android:text="Listado de clientes"/>
+
+      </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+      style="@style/subtitles"
+      android:layout_toLeftOf="@+id/btnCalendar"
+      android:layout_toStartOf="@+id/btnCalendar"
+      android:text="Busque un cliente para realizar venta"/>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/btnBusqueda">
+
+        <EditText
+          android:id="@+id/etBusqueda"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Búsqueda"
+          android:inputType="text"
+          android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <ImageButton
+        android:id="@+id/btnBusqueda"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_search_white"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+      xmlns:cv="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/cbNoData"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      cv:cardBackgroundColor="@color/colorRedInfo"
+      cv:cardCornerRadius="10dp"
+      cv:cardElevation="3dp"
+      cv:cardUseCompatPadding="true"
+      cv:contentPadding="10dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_error"
+          android:tint="@color/colorRed"/>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="No se obtuvieron clientes"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="@color/colorRed"/>
+
+      </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/sRefresh"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

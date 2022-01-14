@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="app.logistikappbeta.com.logistikapp.AddActiveActivity">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+      android:id="@+id/lay_top"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_margin="3dp"
+      android:orientation="vertical">
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.mikepenz.iconics.view.IconicsTextView
+          style="@style/titles"
+          android:layout_centerVertical="true"
+          android:layout_marginBottom="6dp"
+          android:text="{faw-cubes} Activos"/>
+
+      </RelativeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+      android:id="@+id/frame_layout"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="3"/>
+
+    <com.mikepenz.iconics.view.IconicsButton
+      android:id="@+id/btnAddImage"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="{faw_camera} Nueva imagen"
+      style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <EditText
+        android:id="@+id/etBarcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa el Código de Barras"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:layout_weight="1"/>
+
+      <Button
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_weight="1"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

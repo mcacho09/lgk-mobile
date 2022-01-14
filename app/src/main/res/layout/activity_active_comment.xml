@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="app.logistikappbeta.com.logistikapp.ActiveCommentActivity">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_alignParentTop="true"
+      android:layout_below="@+id/lay_buttons"
+      android:orientation="vertical">
+
+      <com.mikepenz.iconics.view.IconicsTextView
+        style="@style/titles"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="6dp"
+        android:text="{faw-cubes} Activos Comentatios e Imagénes"/>
+
+      <TextView
+        android:id="@+id/tvActive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:text="Activo"/>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Agrega tu comentario">
+
+        <EditText
+          android:id="@+id/etComment"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:lines="5"/>
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.mikepenz.iconics.view.IconicsButton
+        android:id="@+id/btnImgTwo"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="{faw_picture_o} Imagen Uno"/>
+
+      <com.mikepenz.iconics.view.IconicsButton
+        android:id="@+id/btnImgOne"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="{faw_picture_o} Imagen Dos"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/lay_buttons"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:orientation="horizontal">
+
+      <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Cancelar"/>
+
+      <Button
+        android:id="@+id/btnSave"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Enviar"/>
+
+    </LinearLayout>
+
+  </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

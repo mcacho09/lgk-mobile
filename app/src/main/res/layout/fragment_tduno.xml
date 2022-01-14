@@ -1,0 +1,448 @@
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="6dp"
+  tools:context="app.logistikappbeta.com.logistikapp.Fragments.TransactionDetailTabs.TDUno">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <ImageView
+          style="@style/icon_titles"
+          android:src="@drawable/ic_attach_money"/>
+
+        <TextView
+          style="@style/titles"
+          android:text="RESUMEN DE TRANSACCIÓN"/>
+
+      </LinearLayout>
+
+      <androidx.cardview.widget.CardView
+        xmlns:cv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cv:cardBackgroundColor="@color/bgCards"
+        cv:cardCornerRadius="6dp"
+        cv:cardElevation="3dp"
+        cv:cardUseCompatPadding="true"
+        cv:contentPadding="6dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/ic_access_time"
+              android:tint="@color/colorBlue"/>
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:text="FECHA TRX"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textColor="@color/colorBlue"/>
+
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="00/00/0000 00:00:00"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+        xmlns:cv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cv:cardBackgroundColor="@color/bgCards"
+        cv:cardCornerRadius="6dp"
+        cv:cardElevation="3dp"
+        cv:cardUseCompatPadding="true"
+        cv:contentPadding="6dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:src="@drawable/ic_place"
+              android:tint="@color/colorBlue"/>
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:text="CLIENTE"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textColor="@color/colorBlue"/>
+
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/tvStore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre del cliente"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+        xmlns:cv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cv:cardBackgroundColor="@color/bgCards"
+        cv:cardCornerRadius="6dp"
+        cv:cardElevation="3dp"
+        cv:cardUseCompatPadding="true"
+        cv:contentPadding="6dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/ic_person"
+              android:tint="@color/colorBlue"/>
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:text="VENDEDOR"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textColor="@color/colorBlue"/>
+
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/tvDri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre del responsable"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+        xmlns:cv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        cv:cardBackgroundColor="@color/bgCards"
+        cv:cardCornerRadius="6dp"
+        cv:cardElevation="3dp"
+        cv:cardUseCompatPadding="true"
+        cv:contentPadding="6dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VENTA"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorGreen"/>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:src="@drawable/ic_attach_money"
+              android:tint="@color/colorGreen"/>
+
+            <TextView
+              android:id="@+id/tvSale"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="0.00"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:textColor="@color/colorGreen"/>
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+          xmlns:cv="http://schemas.android.com/apk/res-auto"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          cv:cardBackgroundColor="@color/bgCards"
+          cv:cardCornerRadius="6dp"
+          cv:cardElevation="3dp"
+          cv:cardUseCompatPadding="true"
+          cv:contentPadding="6dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+              android:id="@+id/tvTChange"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="CAMBIO"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textColor="@color/colorOrange"/>
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <ImageView
+                android:id="@+id/imgChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_compare_arrows"
+                android:tint="@color/colorOrange"/>
+
+              <TextView
+                android:id="@+id/tvChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorOrange"/>
+
+            </LinearLayout>
+
+          </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+          xmlns:cv="http://schemas.android.com/apk/res-auto"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          cv:cardBackgroundColor="@color/bgCards"
+          cv:cardCornerRadius="6dp"
+          cv:cardElevation="3dp"
+          cv:cardUseCompatPadding="true"
+          cv:contentPadding="6dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+              android:id="@+id/tvTDev"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="DEVOLUCIÓN"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textColor="@color/colorOrange"/>
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <ImageView
+                android:id="@+id/imgDev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_cancel"
+                android:tint="@color/colorOrange"/>
+
+              <TextView
+                android:id="@+id/tvDev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorOrange"/>
+
+            </LinearLayout>
+
+          </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+          xmlns:cv="http://schemas.android.com/apk/res-auto"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          cv:cardBackgroundColor="@color/bgCards"
+          cv:cardCornerRadius="6dp"
+          cv:cardElevation="3dp"
+          cv:cardUseCompatPadding="true"
+          cv:contentPadding="6dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_credit_card"
+                android:tint="@color/colorBlue"/>
+
+              <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="NUMERO TRX"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorBlue"/>
+
+            </LinearLayout>
+
+            <TextView
+              android:id="@+id/tvNoTrx"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="0000000000"
+              android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+          </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+          xmlns:cv="http://schemas.android.com/apk/res-auto"
+          android:id="@+id/cvChgStatus"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:clickable="true"
+          android:foreground="?android:attr/selectableItemBackground"
+          cv:cardBackgroundColor="@color/bgCards"
+          cv:cardCornerRadius="6dp"
+          cv:cardElevation="3dp"
+          cv:cardUseCompatPadding="true"
+          cv:contentPadding="6dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <ImageView
+                android:id="@+id/imgApr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_thumb_up"
+                android:tint="@color/colorBlue"/>
+
+              <TextView
+                android:id="@+id/tvTApr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="ESTADO"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorBlue"/>
+
+            </LinearLayout>
+
+            <TextView
+              android:id="@+id/tvApr"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Aprobada"
+              android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+          </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </ScrollView>
+
+</FrameLayout>

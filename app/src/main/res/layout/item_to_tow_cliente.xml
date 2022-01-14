@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cv="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  cv:cardBackgroundColor="@color/bgCards"
+  cv:cardCornerRadius="6dp"
+  cv:cardElevation="3dp"
+  cv:cardUseCompatPadding="true"
+  cv:contentPadding="6dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <ImageView
+        android:id="@+id/imgStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_star"
+        android:tint="@color/bgStar"/>
+
+      <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del cliente"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <ImageView
+        android:id="@+id/imgVisitado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_check_circle"
+        android:tint="@color/colorGray"/>
+
+      <TextView
+        android:id="@+id/tvVisitado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NO VISITADO"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorGray"/>
+
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/tvFueraRango"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="26dp"
+      android:text="Fuera de rango"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:textColor="@color/colorOrange"
+      android:visibility="visible"/>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+          android:id="@+id/imgIco"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:src="@drawable/ic_image"
+          android:tint="@color/colorGray"/>
+
+        <TextView
+          android:id="@+id/tvNoImg"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="0"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="@color/colorGray"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+          android:id="@+id/imgComentarios"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:src="@drawable/ic_chat_bubble_outline"
+          android:tint="@color/colorGray"/>
+
+        <TextView
+          android:id="@+id/tvNoComentarios"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="0"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="@color/colorGray"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+          xmlns:civ="http://schemas.android.com/apk/res-auto"
+          android:id="@+id/cvBarcode"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginRight="6dp"
+          android:src="@drawable/ic_action_barcode_1"
+          android:tint="@color/bgCards"
+          civ:civ_border="true"
+          civ:civ_border_color="@color/colorPurple"
+          civ:civ_border_width="1dp"/>
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+          xmlns:civ="http://schemas.android.com/apk/res-auto"
+          android:id="@+id/cvSale"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginRight="6dp"
+          android:src="@drawable/ic_attach_money"
+          android:tint="@color/bgCards"
+          civ:civ_border="true"
+          civ:civ_border_color="@color/colorBlue"
+          civ:civ_border_width="1dp"/>
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+          xmlns:civ="http://schemas.android.com/apk/res-auto"
+          android:id="@+id/imgCheck"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_gravity="center_vertical"
+          android:src="@drawable/ic_place_white"
+          civ:civ_border="true"
+          civ:civ_border_color="@color/colorGray"
+          civ:civ_border_width="1dp"/>
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            xmlns:civ="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imgMap"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_directions"
+            civ:civ_border="true"
+            android:tint="@color/bgCards"
+            android:layout_marginLeft="6dp"
+            civ:civ_border_color="@color/main_orange_light_color"
+            civ:civ_border_width="1dp"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/tvStatus"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"/>
+
+</androidx.cardview.widget.CardView>

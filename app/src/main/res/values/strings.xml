@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">LogistikApp Beta</string>
+    <string name="btnIngresar">Ingresar</string>
+    <string name="btnRegistrar">Registrar</string>
+    <string name="etUserHint">Usuario</string>
+    <string name="etPassHint">Contraseña</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Menu superior -->
+    <string name="iCRM">CRM</string>
+    <string name="iMiPerfil">Mi perfil</string>
+    <string name="iCerrarSesion">Cerrar sesión</string>
+
+    <!-- Menu lateral (drawable) -->
+    <string name="iInicio">Inicio</string>
+    <string name="iCustomers">Clientes</string>
+    <string name="iLogistica">Logística</string>
+    <string name="iViajes">Viajes</string>
+    <string name="iComunicacion">Comunicación</string>
+    <string name="iMensajes">Mensajes</string>
+    <string name="iNotificaciones">Notificaciones</string>
+    <string name="iHistorico">Histórico</string>
+    <string name="iVersion">Versión: %s</string>
+    <string name="iVentas">Ventas</string>
+    <string name="iTransacciones">Transacciones</string>
+    <string name="iConfiguracion">Configuración</string>
+    <string name="iUsuarios">Usuarios</string>
+    <string name="iAlmacen">Almacén</string>
+
+    <!-- Fragment Inicio -->
+    <string name="tvTituloInicio">Inteligencia de negocios</string>
+    <string name="tvTituloViajes">Viajes</string>
+    <string name="tvTituloClientes">Clientes</string>
+    <string name="tvTituloVisitados">Visitados</string>
+    <string name="tvTituloNoVisitados">No visitados</string>
+    <string name="tvTituloVentas">Ventas</string>
+    <string name="tvTituloProductos">Productos</string>
+    <string name="tvTituloMerma">Merma</string>
+    <string name="tvTituloUtilidad">Utilidad</string>
+
+    <!-- AdminCustomersActivity -->
+    <string name="subtitle_admin_customers">%s de clientes</string>
+
+    <!-- ProcessSaleActivity -->
+    <string-array name="order_status">
+        <item>Pagado</item>
+        <item>No pagado</item>
+    </string-array>
+    <string-array name="order_status_val">
+        <item>APR</item>
+        <item>NP</item>
+    </string-array>
+
+    <!-- ProcessSaleActivity -->
+    <string-array name="order_status_detail">
+        <item>Pagado</item>
+        <item>No pagado</item>
+        <item>Cancelar</item>
+    </string-array>
+    <string-array name="order_status_val_detail">
+        <item>APR</item>
+        <item>NP</item>
+        <item>CAN</item>
+    </string-array>
+
+    <!-- RegisterAcvitity -->
+    <string name="title_activity_register">Registrate</string>
+
+    <!-- AdminUserActivity -->
+    <string-array name="profile_array">
+        <item>Administración</item>
+        <item>Logística</item>
+        <item>Ventas</item>
+    </string-array>
+    <string-array name="profile_array_val">
+        <item>SUP</item>
+        <item>LGK</item>
+        <item>DRI</item>
+    </string-array>
+
+    <string name="amount">{faw_usd} %.2f</string>
+    <string name="title_activity_print_ticket">Imprimir ticket</string>
+
+    <string name="bold_message"><b>Imprimir reporte:</b></string>
+
+    <!-- PrintSDK -->
+    <string name="title_paired_devices">Listado de equipos</string>
+    <string name="title_other_devices">Otros equipos</string>
+    <string name="none_paired">Dispositivos no encontrados</string>
+    <string name="none_found">No se encontraron dispositivos</string>
+    <string name="scanning">Buscando dispositivos&#8230;</string>
+    <string name="select_device">Dispositivo seleccionado</string>
+
+    <!-- Stock -->
+    <string name="title_activity_stock">Sub almacén</string>
+
+    <string name="text_stock_tv_no_products">Productos: %1$d - Paquetes: %2$d</string>
+    <string name="text_stock_tv_cost">Costo: $%.2f</string>
+    <string name="text_stock_tv_sale">Venta $%.2f</string>
+    <string name="tv_min">Min: %s</string>
+    <string name="tv_max">Max: %s</string>
+    <string name="tv_cant">Cant: %s</string>
+    <string name="tv_type">Tipo: %s</string>
+    <string name="tv_pcs">Pzs: %s</string>
+    <string name="tv_repsponsable">Responsable: %s</string>
+    <string name="tv_retail">Plaza: %s</string>
+    <string name="tv_pcs_sub">Piezas: %s</string>
+    <string name="tv_pkg_sub">Paquetes: %s</string>
+
+    <string name="title_activity_actives">Activos</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="last_visited">Ultima visita: %s</string>
+    <string name="title_activity_active_comment">Activos Comentarios e Imágenes</string>
+    <string name="title_activity_add_active">Nuevo Activo</string>
+    <string name="title_activity_offline">Modo Offline</string>
+    <string name="iOffline">Modo offline</string>
+    <string name="tv_sale_and_dev">Venta: $%1$s\nDevolución: $%2$s</string>
+
+</resources>

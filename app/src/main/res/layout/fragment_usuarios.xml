@@ -1,0 +1,149 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".Fragments.UsuariosFragment">
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_toLeftOf="@+id/btnAddUser"
+          android:orientation="horizontal"
+          android:padding="3dp">
+
+          <ImageView
+            style="@style/icon_titles"
+            android:src="@drawable/ic_people"/>
+
+          <TextView
+            style="@style/titles"
+            android:text="Usuarios"/>
+
+        </LinearLayout>
+
+        <Button
+          android:id="@+id/btnAddUser"
+          style="@style/Base.Widget.AppCompat.Button.Colored"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:drawableLeft="@drawable/ic_person_add_white"
+          android:text=" Agregar"/>
+
+      </RelativeLayout>
+
+      <androidx.cardview.widget.CardView
+        xmlns:cv="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cbNoData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        cv:cardBackgroundColor="@color/colorRedInfo"
+        cv:cardCornerRadius="10dp"
+        cv:cardElevation="3dp"
+        cv:cardUseCompatPadding="true"
+        cv:contentPadding="10dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_error"
+            android:tint="@color/colorRed"/>
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No se obtuvieron usuarios"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorRed"/>
+
+        </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/sRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rvList"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"/>
+
+      </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/bottomSheet"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      app:behavior_hideable="true"
+      app:behavior_peekHeight="0dp"
+      android:background="@android:color/white"
+      app:layout_behavior="@string/bottom_sheet_behavior">
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:elevation="12dp"
+        android:background="@color/bgCards">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+          android:text="Ubicando"
+          android:padding="3dp"
+          android:layout_centerVertical="true"
+          android:textColor="@color/colorBlue"
+          android:layout_alignParentLeft="true"/>
+
+        <com.mikepenz.iconics.view.IconicsButton
+          android:id="@+id/btnCloseBs"
+          android:textColor="@color/colorBlue"
+          android:layout_width="40dp"
+          android:layout_height="wrap_content"
+          android:text="{faw_times_circle}"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+
+      </RelativeLayout>
+
+      <com.google.android.gms.maps.MapView
+          android:id="@+id/fMap"
+          class="com.google.android.gms.maps.SupportMapFragment"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="4"/>
+
+    </LinearLayout>
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>

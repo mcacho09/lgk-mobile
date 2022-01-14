@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="horizontal">
+
+  <com.github.vipulasri.timelineview.TimelineView
+    android:id="@+id/time_marker"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    app:line="@color/colorPrimary"
+    app:lineSize="2dp"
+    app:markerSize="20dp"/>
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/cvContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:background="@color/bgCards"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="6dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+      <TextView
+        android:id="@+id/tvStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="Store name"
+          android:layout_alignParentLeft="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+          <ImageView
+              android:id="@+id/img_delete"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:layout_alignParentRight="true"
+              android:drawingCacheQuality="auto"
+              android:src="@drawable/ic_delete_forever"
+              android:tint="@color/colorRed" />
+
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+          android:id="@+id/tvSale"
+          style="@style/TextAppearance.AppCompat.Body1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_toLeftOf="@+id/tvDate"
+          android:text="@string/tv_sale_and_dev"/>
+
+        <TextView
+            android:id="@+id/tvDate"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp"
+            android:text="00/00/0000" />/
+
+      </RelativeLayout>
+
+    </LinearLayout>
+
+  </androidx.cardview.widget.CardView>
+
+</LinearLayout>

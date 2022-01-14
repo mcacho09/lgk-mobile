@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@android:color/white"
+  tools:context=".ProcessSaleActivity">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="3dp"
+    android:padding="3dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <ImageView
+          android:id="@+id/imgIco"
+          style="@style/icon_titles"
+          android:src="@drawable/ic_attach_money"/>
+
+        <TextView
+          android:id="@+id/tvTitle"
+          style="@style/titles"
+          android:layout_gravity="center_vertical"
+          android:text="Confirma la operación"/>
+
+      </LinearLayout>
+
+      <androidx.cardview.widget.CardView
+        xmlns:cv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cv:cardBackgroundColor="@color/bgCards"
+        cv:cardCornerRadius="6dp"
+        cv:cardElevation="3dp"
+        cv:cardUseCompatPadding="true"
+        cv:contentPadding="6dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CLIENTE"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorBlue"
+            android:textStyle="bold"/>
+
+          <TextView
+            android:id="@+id/tvStore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre del cliente"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+        xmlns:cv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cv:cardBackgroundColor="@color/bgCards"
+        cv:cardCornerRadius="6dp"
+        cv:cardElevation="3dp"
+        cv:cardUseCompatPadding="true"
+        cv:contentPadding="6dp">
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <TextView
+            android:id="@+id/tvQtySale"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/circle_shape_aprove"
+            android:gravity="center"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toLeftOf="@+id/tvSale"
+            android:layout_toRightOf="@+id/tvQtySale"
+            android:orientation="vertical">
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Ventas"
+              android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Productos vendidos al cliente"
+              android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/tvSale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_corner"
+            android:text="$00.00"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+        xmlns:cv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cv:cardBackgroundColor="@color/bgCards"
+        cv:cardCornerRadius="6dp"
+        cv:cardElevation="3dp"
+        cv:cardUseCompatPadding="true"
+        cv:contentPadding="6dp">
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <TextView
+            android:id="@+id/tvQtyChg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/circle_shape_no_aprove"
+            android:gravity="center"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/tvQtyChg"
+            android:orientation="vertical">
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Cambios"
+              android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Productos cambiados al cliente"
+              android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+          </LinearLayout>
+
+        </RelativeLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+        xmlns:cv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cv:cardBackgroundColor="@color/bgCards"
+        cv:cardCornerRadius="6dp"
+        cv:cardElevation="3dp"
+        cv:cardUseCompatPadding="true"
+        cv:contentPadding="6dp">
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <TextView
+            android:id="@+id/tvQtyDev"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/circle_shape_no_aprove"
+            android:gravity="center"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toLeftOf="@+id/tvDev"
+            android:layout_toRightOf="@+id/tvQtyDev"
+            android:orientation="vertical">
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Devoluciones"
+              android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Productos devueltos por el cliente"
+              android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/tvDev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_corner_orange"
+            android:text="$00.00"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+        xmlns:cv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cv:cardBackgroundColor="@color/bgCards"
+        cv:cardCornerRadius="6dp"
+        cv:cardElevation="3dp"
+        cv:cardUseCompatPadding="true"
+        cv:contentPadding="6dp">
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Estado:"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+          <com.mikepenz.iconics.view.IconicsButton
+            android:id="@+id/btnStatus"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Pagado"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorBlue"/>
+
+        </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <LinearLayout
+        android:id="@+id/lay_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+          android:id="@+id/btnCancelar"
+          style="@style/Base.Widget.AppCompat.Button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Cancelar"/>
+
+        <Button
+          android:id="@+id/btnProcess"
+          style="@style/Base.Widget.AppCompat.Button.Colored"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Procesar"/>
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/tvsub"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:text="Subtotal:"
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+      <TextView
+          android:id="@+id/tviva"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:text="IVA:"
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+      <TextView
+          android:id="@+id/tvtot"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:text="Total:"
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+    </LinearLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+  <LinearLayout
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="6dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <TextView
+        style="@style/titles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="3dp"
+        android:layout_toLeftOf="@+id/btnCloseBs"
+        android:text="Últimas transacciones"/>
+
+      <com.mikepenz.iconics.view.IconicsButton
+        android:id="@+id/btnCloseBs"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="{faw_times_circle}"
+        android:textColor="@color/colorBlue"/>
+
+    </RelativeLayout>
+
+    <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      style="@style/Base.Widget.AppCompat.Button.Colored"
+      android:text="Guardar Venta"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvList"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+
+  </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

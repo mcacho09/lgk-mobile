@@ -1,0 +1,279 @@
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="app.logistikappbeta.com.logistikapp.Fragments.StockTabs.StockInfoFragment">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <ImageView
+        android:id="@+id/icon_title"
+        style="@style/icon_titles"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_dashboard"/>
+
+      <TextView
+        style="@style/titles"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="6dp"
+        android:layout_toRightOf="@+id/icon_title"
+        android:text="Información de sub almacén"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardBackgroundColor="@android:color/white"
+      app:cardUseCompatPadding="true">
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mikepenz.iconics.view.IconicsImageView
+          android:id="@+id/iiv_code"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:layout_margin="3dp"
+          android:background="@drawable/circle_shape_blue"
+          app:iiv_color="@android:color/white"
+          app:iiv_icon="@string/faw_archive"
+          app:iiv_size="25dp"/>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_toRightOf="@+id/iiv_code"
+          android:orientation="vertical"
+          android:padding="3dp">
+
+          <TextView
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Código"/>
+
+          <TextView
+            android:id="@+id/tvCode"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="Código"/>
+
+        </LinearLayout>
+
+      </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardBackgroundColor="@android:color/white"
+      app:cardUseCompatPadding="true">
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mikepenz.iconics.view.IconicsImageView
+          android:id="@+id/iiv_user"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_centerVertical="true"
+          android:layout_margin="3dp"
+          android:background="@drawable/circle_shape_green"
+          app:iiv_color="@android:color/white"
+          app:iiv_icon="@string/faw_user"
+          app:iiv_size="25dp"/>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_toRightOf="@+id/iiv_user"
+          android:orientation="vertical"
+          android:padding="3dp">
+
+          <TextView
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Encargado"/>
+
+          <TextView
+            android:id="@+id/tvUser"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="Nombre del responsable"/>
+
+        </LinearLayout>
+
+      </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardBackgroundColor="@android:color/white"
+      app:cardUseCompatPadding="true">
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mikepenz.iconics.view.IconicsImageView
+          android:id="@+id/iiv_retail"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_centerVertical="true"
+          android:layout_margin="3dp"
+          android:background="@drawable/circle_shape_yellow"
+          app:iiv_color="@android:color/white"
+          app:iiv_icon="@string/faw_building"
+          app:iiv_size="25dp"/>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_toRightOf="@+id/iiv_retail"
+          android:orientation="vertical"
+          android:padding="3dp">
+
+          <TextView
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Plaza"/>
+
+          <TextView
+            android:id="@+id/tvRetail"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="Nombre de la plaza"/>
+
+        </LinearLayout>
+
+      </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardBackgroundColor="@android:color/white"
+      app:cardUseCompatPadding="true">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:orientation="vertical">
+
+        <TextView
+          style="@style/Base.TextAppearance.AppCompat.Body2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Productos"/>
+
+        <TextView
+          android:id="@+id/tvNoProducts"
+          style="@style/Base.TextAppearance.AppCompat.Body1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/text_stock_tv_no_products"/>
+
+      </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardBackgroundColor="@android:color/white"
+      app:cardUseCompatPadding="true">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:id="@+id/lay_cost"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical">
+
+          <TextView
+            style="@style/Base.TextAppearance.AppCompat.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Costo"/>
+
+          <TextView
+            android:id="@+id/tvCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_stock_tv_cost"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical">
+
+          <TextView
+            style="@style/Base.TextAppearance.AppCompat.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ventas"/>
+
+          <TextView
+            android:id="@+id/tvSale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_stock_tv_sale"/>
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+  </LinearLayout>
+
+</FrameLayout>

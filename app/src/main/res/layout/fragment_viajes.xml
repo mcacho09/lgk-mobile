@@ -1,0 +1,100 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".Fragments.ViajesFragment">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="3dp">
+
+      <ImageView
+        style="@style/icon_titles"
+        android:src="@drawable/ic_local_shipping"/>
+
+      <TextView
+        style="@style/titles"
+        android:text="VIAJES"/>
+    </LinearLayout>
+
+
+    <TextView
+      android:layout_toLeftOf="@+id/btnCalendar"
+      android:layout_toStartOf="@+id/btnCalendar"
+      android:text="Selecciona una fecha"
+      style="@style/subtitles"/>
+
+    <Button
+      android:id="@+id/btnCalendar"
+      style="@style/Base.Widget.AppCompat.Button.Borderless"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:drawableLeft="@drawable/ic_date_range"
+      android:drawableTint="@color/colorBlue"
+      android:text="01/01/2001"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textColor="@color/colorBlue"/>
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="3dp"
+      android:text="LISTADO DE VIAJES"
+      android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <androidx.cardview.widget.CardView
+      xmlns:cv="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/cbNoData"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      cv:cardBackgroundColor="@color/colorRedInfo"
+      cv:cardCornerRadius="10dp"
+      cv:cardElevation="3dp"
+      cv:cardUseCompatPadding="true"
+      cv:contentPadding="10dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_error"
+          android:tint="@color/colorRed"/>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="No hay viajes para este día"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="@color/colorRed"/>
+
+      </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/sRefresh"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  </LinearLayout>
+
+</FrameLayout>

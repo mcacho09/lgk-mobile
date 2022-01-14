@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    cv:cardBackgroundColor="@color/bgCards"
+    cv:cardUseCompatPadding="true"
+    cv:cardElevation="3dp"
+    cv:cardCornerRadius="6dp"
+    cv:contentPadding="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/chAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/chAdd"
+            android:layout_margin="3dp"
+            android:text="Nombre del cliente"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_toLeftOf="@+id/ivShelf"/>
+
+
+        <ImageView
+            android:id="@+id/ivShelf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/bgStar"
+            android:src="@drawable/ic_star"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

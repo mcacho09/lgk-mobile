@@ -1,0 +1,626 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp"
+    tools:context=".Fragments.TravelWayBillTabs.TWBUnoFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:padding="6dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_local_shipping"
+                android:tint="@color/colorBlue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RESUMEN"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorBlue"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_below="@+id/lyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    cv:cardElevation="3dp"
+                    cv:cardUseCompatPadding="true"
+                    cv:cardBackgroundColor="@color/bgCards"
+                    cv:cardCornerRadius="6dp"
+                    cv:contentPadding="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_local_shipping"
+                                android:tint="@color/colorBlue" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="VIAJE"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="@color/colorBlue" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvNombre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:text="Nombre del viaje"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    cv:cardElevation="3dp"
+                    cv:cardUseCompatPadding="true"
+                    cv:cardBackgroundColor="@color/bgCards"
+                    cv:cardCornerRadius="6dp"
+                    cv:contentPadding="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_person"
+                                android:tint="@color/colorPurple" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="ASIGNADO"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="@color/colorPurple" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvAsignado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:text="Nombre del asignado"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    cv:cardElevation="3dp"
+                    cv:cardUseCompatPadding="true"
+                    cv:cardBackgroundColor="@color/bgCards"
+                    cv:cardCornerRadius="6dp"
+                    cv:contentPadding="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_date_range"
+                                android:tint="@color/colorBlue" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="PROGRAMADO"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="@color/colorBlue" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvProgramado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00/00/0000"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        cv:cardElevation="3dp"
+                        cv:cardUseCompatPadding="true"
+                        android:layout_weight="1"
+                        cv:cardBackgroundColor="@color/bgCards"
+                        cv:cardCornerRadius="6dp"
+                        cv:contentPadding="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_access_time"
+                                    android:tint="@color/colorBlue" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="INICIADO"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/colorBlue" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvIniciado"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00/00 00:00"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        cv:cardElevation="3dp"
+                        cv:cardUseCompatPadding="true"
+                        android:layout_weight="1"
+                        cv:cardBackgroundColor="@color/bgCards"
+                        cv:cardCornerRadius="6dp"
+                        cv:contentPadding="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_access_time"
+                                    android:tint="@color/colorBlue" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="FINALIZADO"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/colorBlue" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvFinalizado"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00/00 00:00"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        cv:cardElevation="3dp"
+                        cv:cardUseCompatPadding="true"
+                        android:layout_weight="1"
+                        cv:cardBackgroundColor="@color/bgCards"
+                        cv:cardCornerRadius="6dp"
+                        cv:contentPadding="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_place"
+                                    android:tint="@color/colorBlue" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="CLIENTES"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/colorBlue" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvClientes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        cv:cardElevation="3dp"
+                        cv:cardUseCompatPadding="true"
+                        android:layout_weight="1"
+                        cv:cardBackgroundColor="@color/bgCards"
+                        cv:cardCornerRadius="6dp"
+                        cv:contentPadding="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imgAvance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_sentiment_dissatisfied"
+                                    android:tint="@color/colorRed" />
+
+                                <TextView
+                                    android:id="@+id/tvTAvance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="AVANCE"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/colorRed" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvAvance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20%"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        cv:cardElevation="3dp"
+                        cv:cardUseCompatPadding="true"
+                        android:layout_weight="1"
+                        cv:cardBackgroundColor="@color/bgCards"
+                        cv:cardCornerRadius="6dp"
+                        cv:contentPadding="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_check_circle"
+                                    android:tint="@color/colorGreen" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="CHECKIN OK"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/colorGreen" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvCheckins"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        cv:cardElevation="3dp"
+                        cv:cardUseCompatPadding="true"
+                        android:layout_weight="1"
+                        cv:cardBackgroundColor="@color/bgCards"
+                        cv:cardCornerRadius="6dp"
+                        cv:contentPadding="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_check_circle"
+                                    android:tint="@color/colorOrange" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="FUERA DE RANGO"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/colorOrange" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvFueraRango"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        cv:cardElevation="3dp"
+                        cv:cardUseCompatPadding="true"
+                        android:layout_weight="1"
+                        cv:cardBackgroundColor="@color/bgCards"
+                        cv:cardCornerRadius="6dp"
+                        cv:contentPadding="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imgComentarios"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_chat_bubble_outline"
+                                    android:tint="@color/colorGray" />
+
+                                <TextView
+                                    android:id="@+id/tvTComentarios"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="COMENTARIOS"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/colorGray" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvComentarios"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        cv:cardElevation="3dp"
+                        cv:cardUseCompatPadding="true"
+                        android:layout_weight="1"
+                        cv:cardBackgroundColor="@color/bgCards"
+                        cv:cardCornerRadius="6dp"
+                        cv:contentPadding="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imgImagenes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_image"
+                                    android:tint="@color/colorGray" />
+
+                                <TextView
+                                    android:id="@+id/tvTImagenes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="IMAGENES"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="@color/colorGray" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvImagenes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

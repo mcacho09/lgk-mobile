@@ -1,0 +1,108 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HistoricoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <ImageView
+                android:src="@drawable/ic_access_time"
+                android:layout_gravity="center_vertical"
+                style="@style/icon_titles"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="HISTORICOS"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorBlue"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona una fecha"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:paddingTop="10dp"
+            android:textColor="@color/colorBlue" />
+
+        <Button
+            android:id="@+id/btnCalendar"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:drawableLeft="@drawable/ic_date_range"
+            android:text="01/01/2001"
+            android:textColor="@color/colorBlue"
+            android:drawableTint="@color/colorBlue"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LISTADO DE VIAJES HISTORICO"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:padding="3dp"/>
+
+        <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cbNoData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            cv:cardBackgroundColor="@color/colorRedInfo"
+            cv:cardCornerRadius="10dp"
+            cv:cardElevation="3dp"
+            cv:cardUseCompatPadding="true"
+            cv:contentPadding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_error"
+                    android:tint="@color/colorRed" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No hay viajes para este día"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorRed" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/sRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

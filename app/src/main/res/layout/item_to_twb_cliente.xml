@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    cv:cardBackgroundColor="@color/bgCards"
+    android:background="@color/bgCards"
+    cv:contentPadding="6dp"
+    cv:cardElevation="3dp"
+    cv:cardUseCompatPadding="true"
+    cv:cardCornerRadius="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_margin="6dp">
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/imgStar"
+            android:layout_toLeftOf="@+id/imgStar"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Nombre del cliente"/>
+
+        <ImageView
+            android:id="@+id/imgStar"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star"
+            android:tint="@color/bgStar"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

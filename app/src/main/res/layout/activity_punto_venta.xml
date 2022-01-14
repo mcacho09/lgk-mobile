@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".PuntoVentaActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/btnProcess"
+                android:layout_toStartOf="@+id/btnProcess"
+                cv:cardBackgroundColor="@color/bgCards"
+                cv:cardCornerRadius="3dp"
+                cv:cardElevation="6dp"
+                cv:cardUseCompatPadding="true"
+                cv:contentPadding="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cliente:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/colorBlue" />
+
+                    <TextView
+                        android:id="@+id/tvStore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre del cliente"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnProcess"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Procesar"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/imgIco"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_attach_money"
+                android:tint="@color/colorBlue" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@+id/btnReset"
+                android:layout_toRightOf="@+id/imgIco"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/colorBlue" />
+
+            <Button
+                android:id="@+id/btnReset"
+                style="@style/Base.Widget.AppCompat.Button"
+                android:layout_width="76dp"
+                android:layout_height="38dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btnCalc"
+                android:text="LIMPIAR"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorRed" />
+
+            <Button
+                android:id="@+id/btnCalc"
+                style="@style/Base.Widget.AppCompat.Button"
+                android:layout_width="87dp"
+                android:layout_height="38dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Calcular"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlue" />
+
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/Base.Widget.AppCompat.Button"
+                android:layout_width="78dp"
+                android:layout_height="38dp"
+                android:layout_toLeftOf="@+id/btnReset"
+                android:text="OFFLINE"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/main_orange_stroke_color" />
+
+            <Button
+                android:id="@+id/btnShow"
+                style="@style/Base.Widget.AppCompat.Button"
+                android:layout_width="84dp"
+                android:layout_height="38dp"
+                android:layout_toLeftOf="@+id/btnSave"
+                android:text="MOSTRAR"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/main_green_stroke_color" />
+        </RelativeLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:tabGravity="fill"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed" />
+        </androidx.viewpager.widget.ViewPager>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

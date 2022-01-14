@@ -1,0 +1,126 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="app.logistikappbeta.com.logistikapp.Fragments.TrxADMFragment">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="3dp">
+
+      <ImageView
+        android:id="@+id/imgTitle"
+        style="@style/icon_titles"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_attach_money"/>
+
+      <TextView
+        android:id="@+id/tvTitle"
+        style="@style/titles"
+        android:layout_toEndOf="@+id/imgTitle"
+        android:layout_toRightOf="@+id/imgTitle"
+        android:text="LISTADO DE TRANSACCIONES"/>
+
+    </RelativeLayout>
+
+    <TextView
+      style="@style/subtitles"
+      android:text="Seleccione una fecha"/>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <Button
+        android:id="@+id/btnCalendar"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_date_range"
+        android:drawableTint="@color/colorBlue"
+        android:text="01/01/2001"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorBlue"/>
+
+      <Button
+          android:id="@+id/btnPrint"
+          android:layout_width="48dp"
+          android:layout_height="47dp"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="119dp"
+          android:layout_toLeftOf="@+id/btnSale"
+          android:backgroundTint="#D3D3D3"
+          android:drawableLeft="@drawable/ic_printer_small"
+          android:textSize="12dp"
+          android:textStyle="bold" />
+
+      <Button
+        android:id="@+id/btnSale"
+        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_attach_money"
+        android:drawableTint="@color/colorBlue"
+        android:text=" Vender"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+      xmlns:cv="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/cbNoData"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      cv:cardBackgroundColor="@color/colorRedInfo"
+      cv:cardCornerRadius="10dp"
+      cv:cardElevation="10dp"
+      cv:cardUseCompatPadding="true"
+      cv:contentPadding="10dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_error"
+          android:tint="@color/colorRed"/>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="No hay transacciones para este día"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="@color/colorRed"/>
+
+      </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/sRefresh"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  </LinearLayout>
+
+</FrameLayout>

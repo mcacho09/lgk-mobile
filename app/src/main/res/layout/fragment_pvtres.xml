@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp"
+    tools:context="app.logistikappbeta.com.logistikapp.Fragments.PuntoVentaTabs.PVTres">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/lyLoad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgCards"
+        android:elevation="1dp">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cargando productos"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorBlue"
+            android:layout_below="@+id/progress"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

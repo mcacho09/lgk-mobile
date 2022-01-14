@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cv="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:clickable="true"
+  android:focusable="true"
+  android:foreground="?android:attr/selectableItemBackground"
+  cv:cardBackgroundColor="@color/bgCards"
+  cv:cardCornerRadius="6dp"
+  cv:cardElevation="3dp"
+  cv:cardUseCompatPadding="true"
+  cv:contentPadding="6dp">
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="6dp"
+    android:layout_toLeftOf="@+id/tvSaled"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:weightSum="5">
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="No. de Trx"
+          android:textAppearance="@style/TextAppearance.AppCompat.Small"
+          android:textColor="@color/colorBlue"/>
+
+        <TextView
+          android:id="@+id/tvNoTrx"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="1234567890"
+          android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Venta"
+          android:textAppearance="@style/TextAppearance.AppCompat.Small"
+          android:textColor="@color/colorBlue"/>
+
+        <com.mikepenz.iconics.view.IconicsTextView
+          android:id="@+id/tvSaled"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/amount"
+          android:textAppearance="@style/TextAppearance.AppCompat.Title"
+          android:textColor="@color/colorGreen"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:text="Vendedor"
+          android:textAppearance="@style/TextAppearance.AppCompat.Small"
+          android:textColor="@color/colorBlue"/>
+
+        <TextView
+          android:id="@+id/tvName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Nombre"
+          android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:text="Productos"
+          android:textAppearance="@style/TextAppearance.AppCompat.Small"
+          android:textColor="@color/colorBlue"/>
+
+        <TextView
+          android:id="@+id/tvProductsQty"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="0"
+          android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+      </LinearLayout>
+
+      <com.mikhaellopez.circularimageview.CircularImageView
+        xmlns:imc="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ivBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_arrow_forward"
+        android:tint="@android:color/white"
+        imc:civ_border="true"
+        imc:civ_border_color="@color/colorBlue"
+        imc:civ_shadow="true"
+        imc:civ_shadow_color="#eee"
+        imc:civ_shadow_radius="4"/>
+
+    </RelativeLayout>
+
+  </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

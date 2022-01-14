@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="app.logistikappbeta.com.logistikapp.OfflineActivity">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+      android:id="@+id/lyTitle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="3dp">
+
+      <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_signal_cellular_connected_no_internet"
+        android:tint="@color/colorBlue"/>
+
+      <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modo offline"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorBlue"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/layProgress"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/lyTitle"
+      android:layout_marginBottom="6dp"
+      android:layout_marginTop="6dp"
+      android:elevation="6dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Actualizando ventas"
+        android:textAlignment="center"/>
+
+      <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="visible"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvList"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@+id/btnSync"
+      android:layout_below="@+id/layProgress"
+      android:layout_marginTop="3dp"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+    <Button
+      android:id="@+id/btnSync"
+      style="@style/Base.Widget.AppCompat.Button.Colored"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginTop="6dp"
+      android:text="Sincronizar"/>
+
+  </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

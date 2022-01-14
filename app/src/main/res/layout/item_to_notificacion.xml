@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:cv="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="3dp"
+    android:layout_marginTop="3dp"
+    android:layout_width="match_parent"
+    cv:cardBackgroundColor="@color/bgCards"
+    cv:cardCornerRadius="6dp"
+    cv:contentPadding="6dp"
+    cv:cardUseCompatPadding="true"
+    cv:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_person"
+                android:tint="@color/colorBlue" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/tvResp"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tvDate"
+                android:layout_toRightOf="@+id/ivIcon"
+                android:layout_width="wrap_content"
+                android:text="Nombre de la persona"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorBlue" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/tvDate"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="00/00 00:00"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:maxLines="999999999"
+            android:minLines="0"
+            android:text="Descripción de la notificación"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
